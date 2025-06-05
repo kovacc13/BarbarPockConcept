@@ -16,8 +16,8 @@
             font-family: 'Playfair Display', serif;
         }
         .hero-bg {
-            /* Dimensionen aus der URL entfernt */
-            background-image: url('https://placehold.co/F0FDF4/166534');
+            /* Du kannst hier die URL zu deinem gewünschten Hero-Bild einfügen */
+            background-image: url('https://images.unsplash.com/photo-1530890003907-0bf04f196029?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Beispielhaftes Stimmungsbild: Sanfte Natur / Wellness */
             background-size: cover;
             background-position: center;
         }
@@ -25,7 +25,7 @@
             @apply text-2xl md:text-3xl font-bold text-emerald-700 mb-8 text-center;
         }
         .btn {
-            @apply inline-block px-6 py-3 text-base sm:text-lg font-semibold rounded-lg shadow-md transition-transform duration-300 ease-in-out; /* Button padding und Textgröße leicht angepasst */
+            @apply inline-block px-6 py-3 text-base sm:text-lg font-semibold rounded-lg shadow-md transition-transform duration-300 ease-in-out;
         }
         .btn-primary {
             @apply bg-emerald-600 text-white hover:bg-emerald-700 hover:scale-105;
@@ -34,7 +34,10 @@
             @apply bg-white text-emerald-600 border border-emerald-600 hover:bg-emerald-50 hover:scale-105;
         }
         .card {
-            @apply bg-white p-6 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl;
+            @apply bg-white p-6 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl flex flex-col justify-between; /* Stellt sicher, dass Button unten ist */
+        }
+        .card-content {
+            @apply flex-grow;
         }
         nav a {
             @apply text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium transition-colors;
@@ -46,7 +49,7 @@
     <!-- Navigation -->
     <nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 sm:h-20"> <!-- Höhe der Navigationsleiste leicht reduziert für kleinere Bildschirme -->
+            <div class="flex items-center justify-between h-16 sm:h-20">
                 <div class="flex items-center">
                     <a href="#" class="text-lg sm:text-xl font-bold text-emerald-700 font-['Playfair_Display']">Barbara Pock</a>
                     <span class="ml-2 text-xs text-emerald-600 hidden sm:inline">TCM Beauty & Gua Sha</span>
@@ -60,7 +63,7 @@
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-emerald-600 focus:outline-none p-2"> <!-- Padding zum Button hinzugefügt -->
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-emerald-600 focus:outline-none p-2">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
@@ -79,8 +82,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-bg pt-16 sm:pt-20"> <!-- Padding-top angepasst für die Navigationsleiste -->
-        <div class="bg-black/40 min-h-[calc(80vh)] sm:min-h-[calc(100vh-5rem)] flex items-center justify-center py-10"> <!-- Vertikales Padding und min-height angepasst -->
+    <header class="hero-bg pt-16 sm:pt-20">
+        <div class="bg-black/40 min-h-[calc(80vh)] sm:min-h-[calc(100vh-5rem)] flex items-center justify-center py-10">
             <div class="text-center p-6 sm:p-8 text-white max-w-2xl lg:max-w-3xl mx-auto">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-snug sm:leading-tight">
                     Entdecke die <span class="text-emerald-300 whitespace-nowrap">Kraft der Berührung</span>
@@ -88,18 +91,18 @@
                 <p class="text-sm sm:text-base md:text-lg mb-8 font-light leading-relaxed">
                     Gua Sha & TCM für deine natürliche Schönheit. Harmonie für Haut und Seele – 100% natürlich und biologisch.
                 </p>
-                <!-- Die Buttons wurden hier entfernt -->
             </div>
         </div>
     </header>
 
     <main>
         <!-- Über Mich Section -->
-        <section id="ueber-mich" class="py-12 md:py-20 bg-white"> <!-- Padding angepasst -->
+        <section id="ueber-mich" class="py-12 md:py-20 bg-white">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="md:flex md:items-center md:space-x-12">
                     <div class="md:w-1/3 mb-8 md:mb-0 text-center">
-                        <img src="https://placehold.co/300x400/A3E6B4/333333?text=Barbara+Pock" alt="Barbara Pock Porträt" class="rounded-xl shadow-2xl mx-auto max-w-[250px] sm:max-w-[300px]" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/B0B0B0?text=Bild';">
+                        <!-- Bild von Barbara Pock eingefügt (von Imgur) -->
+                        <img src="https://i.imgur.com/zSB1Smc.jpg" alt="Porträt von Barbara Pock" class="rounded-xl shadow-2xl mx-auto max-w-[250px] sm:max-w-[300px] h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/B0B0B0?text=Bild+konnte+nicht+geladen+werden';">
                     </div>
                     <div class="md:w-2/3">
                         <h2 class="section-title text-left md:text-left">Herzlich Willkommen!</h2>
@@ -118,89 +121,124 @@
         </section>
 
         <!-- Workshops Section -->
-        <section id="workshops" class="py-12 md:py-20 bg-emerald-50"> <!-- Padding angepasst -->
+        <section id="workshops" class="py-12 md:py-20 bg-emerald-50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="section-title">Erlebe Gua Sha: Interaktive Workshops</h2>
                 <p class="text-base sm:text-lg text-gray-600 text-center max-w-2xl mx-auto mb-10 leading-relaxed">
                     In meinen Workshops lernst du die faszinierende Technik des Gua Sha kennen und anzuwenden. Entdecke, wie du mit sanften Streichungen Verspannungen lösen, die Durchblutung fördern und deiner Haut zu neuer Vitalität verhelfen kannst.
                 </p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Workshop Card 1 -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/A3E6B4/166534?text=Gua+Sha+Grundlagen" alt="Gua Sha Grundlagen Workshop" class="rounded-t-lg mb-4 w-full h-40 sm:h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Bild';">
-                        <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Gua Sha Grundlagen</h3>
-                        <p class="text-sm sm:text-base text-gray-600 mb-4">
-                            Lerne die Basis-Techniken des Gua Sha für Gesicht und Nacken. Ideal für Einsteiger.
-                        </p>
-                        <a href="#" class="btn btn-primary w-full text-center text-sm sm:text-base">Mehr erfahren & Termine</a>
+                        <div class="card-content">
+                            <!-- WICHTIG: Ersetze die folgende src-URL durch die öffentliche URL deines Workshop-Bildes -->
+                            <img src="https://images.unsplash.com/photo-1598603005807-94539e314458?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bild zum Gua Sha Grundlagen Workshop" class="rounded-t-lg mb-4 w-full h-40 sm:h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Workshop-Bild';">
+                            <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Gua Sha Grundlagen</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4">
+                                Lerne die Basis-Techniken des Gua Sha für Gesicht und Nacken. Ideal für Einsteiger.
+                            </p>
+                        </div>
+                        <!-- HIER DEINEN CAL.COM LINK FÜR DIESEN WORKSHOP EINFÜGEN -->
+                        <a href="https://cal.com/dein-benutzername/gua-sha-grundlagen" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full text-center text-sm sm:text-base mt-auto">Termin buchen (Cal.com)</a>
                     </div>
+                    <!-- Workshop Card 2 -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/86EFAC/166534?text=TCM+Beauty+Rituale" alt="TCM Beauty Rituale Workshop" class="rounded-t-lg mb-4 w-full h-40 sm:h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Bild';">
-                        <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">TCM Beauty Rituale</h3>
-                        <p class="text-sm sm:text-base text-gray-600 mb-4">
-                            Tauche tiefer ein in die Welt der TCM und entdecke ganzheitliche Pflegerituale für deine Schönheit.
-                        </p>
-                        <a href="#" class="btn btn-primary w-full text-center text-sm sm:text-base">Mehr erfahren & Termine</a>
+                         <div class="card-content">
+                            <!-- WICHTIG: Ersetze die folgende src-URL durch die öffentliche URL deines Workshop-Bildes -->
+                            <img src="https://images.unsplash.com/photo-1552693673-1bfb9c458459?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bild zum TCM Beauty Rituale Workshop" class="rounded-t-lg mb-4 w-full h-40 sm:h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Workshop-Bild';">
+                            <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">TCM Beauty Rituale</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4">
+                                Tauche tiefer ein in die Welt der TCM und entdecke ganzheitliche Pflegerituale für deine Schönheit.
+                            </p>
+                        </div>
+                        <!-- HIER DEINEN CAL.COM LINK FÜR DIESEN WORKSHOP EINFÜGEN -->
+                        <a href="https://cal.com/dein-benutzername/tcm-beauty-rituale" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full text-center text-sm sm:text-base mt-auto">Termin buchen (Cal.com)</a>
                     </div>
+                    <!-- Workshop Card 3 -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/6EE7B7/166534?text=Detox+mit+Gua+Sha" alt="Detox mit Gua Sha Workshop" class="rounded-t-lg mb-4 w-full h-40 sm:h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Bild';">
-                        <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Detox mit Gua Sha</h3>
-                        <p class="text-sm sm:text-base text-gray-600 mb-4">
-                            Erfahre, wie Gua Sha die lymphatische Drainage unterstützt und zur Entgiftung beitragen kann.
-                        </p>
-                        <a href="#" class="btn btn-primary w-full text-center text-sm sm:text-base">Mehr erfahren & Termine</a>
+                        <div class="card-content">
+                            <!-- WICHTIG: Ersetze die folgende src-URL durch die öffentliche URL deines Workshop-Bildes -->
+                            <img src="https://images.unsplash.com/photo-1512290923902-8a5f8768386e?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bild zum Detox mit Gua Sha Workshop" class="rounded-t-lg mb-4 w-full h-40 sm:h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Workshop-Bild';">
+                            <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Detox mit Gua Sha</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4">
+                                Erfahre, wie Gua Sha die lymphatische Drainage unterstützt und zur Entgiftung beitragen kann.
+                            </p>
+                        </div>
+                        <!-- HIER DEINEN CAL.COM LINK FÜR DIESEN WORKSHOP EINFÜGEN -->
+                        <a href="https://cal.com/dein-benutzername/gua-sha-detox" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full text-center text-sm sm:text-base mt-auto">Termin buchen (Cal.com)</a>
                     </div>
+                </div>
+                 <div class="text-center mt-12">
+                     <!-- Optional: Ein allgemeiner Link zu deiner Cal.com Seite -->
+                    <a href="https://cal.com/dein-benutzername" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Alle Workshop-Termine (Cal.com)</a>
                 </div>
             </div>
         </section>
 
         <!-- Produkte Section -->
-        <section id="produkte" class="py-12 md:py-20 bg-white"> <!-- Padding angepasst -->
+        <section id="produkte" class="py-12 md:py-20 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="section-title">Reine Pflege: 100% Natürliche & Biologische Produkte</h2>
                 <p class="text-base sm:text-lg text-gray-600 text-center max-w-2xl mx-auto mb-10 leading-relaxed">
                     Entdecke meine sorgfältig ausgewählte Kollektion an Gua Sha Steinen und Hautpflegeprodukten – inspiriert von der TCM, vegan und frei von künstlichen Zusätzen. Für eine Haut, die strahlt.
                 </p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Produkt Card 1 -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/ECFDF5/16A34A?text=Rosenquarz+Gua+Sha" alt="Rosenquarz Gua Sha Stein" class="rounded-lg mb-4 w-full h-56 sm:h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Produkt';">
-                        <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Rosenquarz Gua Sha</h3>
-                        <p class="text-sm sm:text-base text-gray-600 mb-4">
-                            Hochwertiger Gua Sha Stein aus echtem Rosenquarz für eine sanfte und liebevolle Gesichtsmassage.
-                        </p>
-                        <a href="#" class="btn btn-secondary w-full text-center text-sm sm:text-base">Details & Kaufen</a>
+                        <div class="card-content">
+                            <!-- WICHTIG: Ersetze die folgende src-URL durch die öffentliche URL deines Produktbildes -->
+                            <img src="https://images.unsplash.com/photo-1601620817126-7e3e93312007?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bild vom Rosenquarz Gua Sha Stein" class="rounded-lg mb-4 w-full h-56 sm:h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Produkt-Bild';">
+                            <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Rosenquarz Gua Sha</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4">
+                                Hochwertiger Gua Sha Stein aus echtem Rosenquarz für eine sanfte und liebevolle Gesichtsmassage.
+                            </p>
+                        </div>
+                        <!-- HIER DEINEN SHOP-LINK ZUM PRODUKT EINFÜGEN -->
+                        <a href="https://dein-shop.com/rosenquarz-gua-sha" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full text-center text-sm sm:text-base mt-auto">Details & Kaufen</a>
                     </div>
+                    <!-- Produkt Card 2 -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/D1FAE5/059669?text=Bio+Gesichtsöl" alt="Biologisches Gesichtsöl" class="rounded-lg mb-4 w-full h-56 sm:h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Produkt';">
-                        <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Nährendes Bio-Gesichtsöl</h3>
-                        <p class="text-sm sm:text-base text-gray-600 mb-4">
-                            Reichhaltiges Gesichtsöl mit biologischen Inhaltsstoffen, perfekt für die Gua Sha Anwendung und tägliche Pflege.
-                        </p>
-                        <a href="#" class="btn btn-secondary w-full text-center text-sm sm:text-base">Details & Kaufen</a>
+                        <div class="card-content">
+                            <!-- WICHTIG: Ersetze die folgende src-URL durch die öffentliche URL deines Produktbildes -->
+                            <img src="https://images.unsplash.com/photo-1604268087015-3d9818887912?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bild vom Nährenden Bio-Gesichtsöl" class="rounded-lg mb-4 w-full h-56 sm:h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Produkt-Bild';">
+                            <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Nährendes Bio-Gesichtsöl</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4">
+                                Reichhaltiges Gesichtsöl mit biologischen Inhaltsstoffen, perfekt für die Gua Sha Anwendung und tägliche Pflege.
+                            </p>
+                        </div>
+                        <!-- HIER DEINEN SHOP-LINK ZUM PRODUKT EINFÜGEN -->
+                        <a href="https://dein-shop.com/bio-gesichtsoel" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full text-center text-sm sm:text-base mt-auto">Details & Kaufen</a>
                     </div>
+                    <!-- Produkt Card 3 -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/BBF7D0/047857?text=Jade+Roller+Set" alt="Jade Roller und Gua Sha Set" class="rounded-lg mb-4 w-full h-56 sm:h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Produkt';">
-                        <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Jade Roller & Gua Sha Set</h3>
-                        <p class="text-sm sm:text-base text-gray-600 mb-4">
-                            Das perfekte Duo für deine TCM-inspirierte Pflegeroutine. Fördert Durchblutung und Entspannung.
-                        </p>
-                        <a href="#" class="btn btn-secondary w-full text-center text-sm sm:text-base">Details & Kaufen</a>
+                        <div class="card-content">
+                            <!-- WICHTIG: Ersetze die folgende src-URL durch die öffentliche URL deines Produktbildes -->
+                            <img src="https://images.unsplash.com/photo-1590322119814-e0a69f1c9903?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bild vom Jade Roller & Gua Sha Set" class="rounded-lg mb-4 w-full h-56 sm:h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/B0B0B0?text=Produkt-Bild';">
+                            <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-2">Jade Roller & Gua Sha Set</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4">
+                                Das perfekte Duo für deine TCM-inspirierte Pflegeroutine. Fördert Durchblutung und Entspannung.
+                            </p>
+                        </div>
+                        <!-- HIER DEINEN SHOP-LINK ZUM PRODUKT EINFÜGEN -->
+                        <a href="https://dein-shop.com/jade-set" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full text-center text-sm sm:text-base mt-auto">Details & Kaufen</a>
                     </div>
                 </div>
                  <div class="text-center mt-10">
-                    <a href="#" class="btn btn-primary">Zum gesamten Sortiment</a>
+                     <!-- HIER DEINEN SHOP-LINK ZUM GESAMTEN SORTIMENT EINFÜGEN -->
+                    <a href="https://dein-shop.com/alle-produkte" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Zum gesamten Sortiment</a>
                 </div>
             </div>
         </section>
 
         <!-- Kontakt Section -->
-        <section id="kontakt" class="py-12 md:py-20 bg-emerald-700 text-white"> <!-- Padding angepasst -->
+        <section id="kontakt" class="py-12 md:py-20 bg-emerald-700 text-white">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 font-['Playfair_Display']">Nimm Kontakt auf</h2>
                 <p class="text-base sm:text-lg mb-8 leading-relaxed">
                     Hast du Fragen zu meinen Workshops, Produkten oder möchtest eine individuelle Beratung? Ich freue mich von dir zu hören!
                 </p>
                 <div class="space-y-3 sm:space-y-4">
-                    <a href="mailto:info@barbarapock.at" class="btn bg-white text-emerald-700 hover:bg-emerald-50 w-full max-w-xs mx-auto sm:w-auto sm:max-w-none flex items-center justify-center text-sm sm:text-base">
+                    <a href="mailto:barbara.pock@christian-kovac.at" class="btn bg-white text-emerald-700 hover:bg-emerald-50 w-full max-w-xs mx-auto sm:w-auto sm:max-w-none flex items-center justify-center text-sm sm:text-base">
                         <i class="fas fa-envelope mr-2"></i> Schreib mir eine E-Mail
                     </a>
                     <a href="tel:+436504293811" class="btn bg-white text-emerald-700 hover:bg-emerald-50 w-full max-w-xs mx-auto sm:w-auto sm:max-w-none flex items-center justify-center text-sm sm:text-base">
@@ -225,7 +263,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-stone-100 text-gray-600 py-10"> <!-- Padding angepasst -->
+    <footer class="bg-stone-100 text-gray-600 py-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="mb-2 text-sm">&copy; <span id="currentYear"></span> Barbara Pock - Alle Rechte vorbehalten.</p>
             <p class="text-xs sm:text-sm">
@@ -278,3 +316,4 @@
 
 </body>
 </html>
+
