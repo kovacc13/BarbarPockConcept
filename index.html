@@ -47,8 +47,19 @@
             /* Schatten wurde entfernt */
             @apply inline-block px-6 py-3 text-base sm:text-lg font-semibold rounded-lg transition-transform duration-300 ease-in-out;
         }
-        .card-content {
-            @apply flex-grow;
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 125%; /* Verhältnis für die Höhe des iFrames, anpassbar */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>
@@ -93,7 +104,8 @@
     <!-- Hero Section -->
     <header class="bg-gray-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center min-h-[calc(100vh-80px)] py-12 md:py-20">
+            <!-- Vertikale Ausrichtung auf `items-start` geändert und Padding angepasst -->
+            <div class="flex flex-col md:flex-row items-start min-h-[calc(100vh-80px)] pt-12 md:pt-20 pb-12">
                 <!-- Text & Logo Section -->
                 <div class="w-full md:w-1/2 text-center md:text-left pr-0 md:pr-12 mb-10 md:mb-0">
                      <div class="inline-flex flex-col items-center md:items-start mb-8">
@@ -102,7 +114,8 @@
                         </svg>
                         <span class="text-sm font-semibold text-gray-800 mt-2 playfair tracking-widest">BARBARA POCK</span>
                     </div>
-                    <h1 class="text-2xl md:text-3xl font-medium text-gray-700 leading-normal tracking-wider uppercase">
+                    <!-- Schriftgröße um ca. 20% erhöht -->
+                    <h1 class="text-3xl md:text-4xl font-medium text-gray-700 leading-normal tracking-wider uppercase">
                         Schönheitsrituale<br>
                         mit sichtbaren<br>
                         Ergebnissen.<br>
@@ -114,7 +127,7 @@
                 </div>
                 <!-- Image Section -->
                 <div class="w-full md:w-1/2">
-                    <img src="https://i.imgur.com/RIDuwia.jpg" alt="Frau bei einer Gua Sha Gesichtsmassage" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://i.imgur.com/jeB1plw.jpg" alt="Gua Sha Werkzeuge und Pflegeprodukte" class="w-full h-full object-cover rounded-lg">
                 </div>
             </div>
         </div>
@@ -144,30 +157,15 @@
             </div>
         </section>
 
-        <!-- Workshops Section -->
+        <!-- Workshops Section mit iFrame Einbettung -->
         <section id="workshops" class="py-12 md:py-20 bg-almost-white">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                 <h2 class="text-xl md:text-2xl font-semibold text-accent-red mb-4">
-                    Melde dich jetzt für den GUA SHA WORKSHOP (90 Minuten) an – und Du wirst wieder richtig gern in den Spiegel schauen.
-                </h2>
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8 playfair underline">
-                    Deine Investition für den GUA SHA WORKSHOP
-                </h3>
-
-                <div class="text-left inline-block max-w-md mx-auto">
-                    <p class="text-lg font-semibold text-gray-700 mb-4">Inklusive:</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-600">
-                        <li>Gua Sha Massage Stein steht für Dich bereit + individuell abgestimmte Gesichtspflege</li>
-                        <li>Übungsvideo für zu Hause, das die einzelnen Techniken zeigt und erklärt</li>
-                    </ul>
-                </div>
-
-                <div class="mt-8">
-                    <p class="text-2xl font-bold text-gray-800 mb-6">Paketpreis: 48 Euro</p>
-                    <!-- Booking-iFrame eingefügt -->
-                    <div class="w-full mx-auto" style="height: 600px; max-width: 800px;">
-                       <iframe src='https://outlook.office.com/owa/calendar/GuaShaWorkshop@christian-kovac.at/bookings/?ismsaljsauthenabled' width='100%' height='100%' scrolling='yes' style='border:0'></iframe>
-                    </div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <h2 class="section-title">Gua Sha Workshop buchen</h2>
+                 <p class="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
+                    Wähle deinen Wunschtermin direkt hier auf der Seite. Ich freue mich auf dich!
+                </p>
+                <div class="iframe-container rounded-lg border border-gray-200">
+                    <iframe src='https://outlook.office.com/owa/calendar/GuaShaWorkshop@christian-kovac.at/bookings/?ismsaljsauthenabled' width='100%' height='100%' scrolling='yes' style='border:0'></iframe>
                 </div>
             </div>
         </section>
@@ -177,7 +175,7 @@
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="section-title">Nimm Kontakt auf</h2>
                 <p class="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
-                    Hast du Fragen zu meinen Workshops, Produkten oder möchtest eine individuelle Beratung? Ich freue mich von dir zu hören!
+                    Hast du Fragen zu meinen Workshops oder möchtest eine individuelle Beratung? Ich freue mich von dir zu hören!
                 </p>
                 <div class="space-y-3 sm:space-y-4">
                     <a href="mailto:barbara.pock@christian-kovac.at" class="btn btn-secondary-outline w-full max-w-xs mx-auto sm:w-auto sm:max-w-none flex items-center justify-center text-sm sm:text-base">
@@ -259,6 +257,7 @@
 
 </body>
 </html>
+
 
 
 
